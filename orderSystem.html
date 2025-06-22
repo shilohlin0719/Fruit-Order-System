@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="orderSystem.css">
+</head>
+<body>
+    <main id="main">
+        <h2>フルーツ注文システム</h2>
+        <div class="container">
+            <h3>商品選択</h3>
+            <form name="orderSystem">
+                <div class="picture">
+                    <div class="fruitName">リンゴ</div>
+                    <img src="images/apple.png" alt="リンゴ">
+                    <div class="fruitPrice">150円</div>
+                    <input type="number" name="apple" value="0" min="0" oninput="this.value = Math.max(0, this.value)">
+                </div>
+                <div class="picture">
+                    <div class="fruitName">バナナ</div>
+                    <img src="images/banana.png" alt="バナナ">
+                    <div class="fruitPrice">80円</div>
+                    <input type="number" name="banana" value="0" min="0" oninput="this.value = Math.max(0, this.value)">
+                </div>
+                <div class="picture">
+                    <div class="fruitName">ぶどう</div>
+                    <img src="images/grape.png" alt="ぶどう">
+                    <div class="fruitPrice">450円</div>
+                    <input type="number" name="grape" value="0" min="0" oninput="this.value = Math.max(0, this.value)">
+                </div>
+                <div class="picture">
+                    <div class="fruitName">メロン</div>
+                    <img src="images/melon.png" alt="メロン">
+                    <div class="fruitPrice">600円</div>
+                    <input type="number" name="melon" value="0" min="0" oninput="this.value = Math.max(0, this.value)">
+                </div>
+                <div class="picture">
+                    <div class="fruitName">みかん</div>
+                    <img src="images/orange.png" alt="みかん">
+                    <div class="fruitPrice">120円</div>
+                    <input type="number" name="orange" value="0" min="0" oninput="this.value = Math.max(0, this.value)">
+                </div>
+                <div class="picture">
+                    <div class="fruitName">スイカ</div>
+                    <img src="images/watermelon.png" alt="スイカ">
+                    <div class="fruitPrice">500円</div>
+                    <input type="number" name="watermelon" value="0" min="0" oninput="this.value = Math.max(0, this.value)">
+                </div>
+            </form>
+            <button type="button" onclick="makeOrder()">注文する</button>
+        </div>
+        <div class="container">
+            <h3>注文履歴</h3>
+            <table>
+                <tbody id="historyTable">
+                    <tr>
+                        <th></th>
+                        <th>リンゴ</th>
+                        <th>バナナ</th>
+                        <th>ぶどう</th>
+                        <th>メロン</th>
+                        <th>みかん</th>
+                        <th>スイカ</th>
+                        <th>合計</th>
+                    </tr>
+                    <tr id="lastRow">
+                        <td style="text-align: center;">総合金額</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td id="yen">円</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button type="button" onclick="handleCheckout()">会計する</button>
+        </div>
+    </main>
+    <footer>
+        <small>Copyright &copy; 2025 LIN YUHSUAN(24CA0245)  All rights reserved.</small>
+    </footer>
+    <script src="orderSystem.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+/* 基本スタイル */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    background-color: lightblue;
+    border: none;
+    width: 15%;
+    padding: 2%;
+    border-radius: 50%;
+    color: darkblue;
+    font-size: 100%;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+/* 注文スタイル */
+form {
+    display: flex;
+    flex-direction: row;
+    gap: 2%;
+}
+
+.picture {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 15%;
+    border-style: solid;
+    border-color: orange;
+    border-radius: 5%;
+    padding: 1%;
+    margin: 1%;
+    gap: 1%;
+}
+
+.fruitName {
+    height: 15%;
+}
+
+img {
+    width: 90%;
+    height: 60%;
+    margin: 10px;
+}
+
+.fruitPrice {
+    height: 10%;
+    margin: 3%;
+}
+
+input {
+    width: 80%;
+}
+
+button {
+    margin: 20px;
+}
+
+/* 履歴スタイル */
+table {
+    width: 100%;
+    border-style: dashed;
+}
+
+th, td {
+    width: 10%;
+}
+
+th {
+    background-color: lightgoldenrodyellow;
+}
+
+td {
+    text-align: center;
+    border-top: 3px solid darkcyan;
+}
+
+tr:last-child td{
+    text-align: end;
+}
+
+
